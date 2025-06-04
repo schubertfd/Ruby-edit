@@ -1,0 +1,14 @@
+.hero {
+  border-bottom: solid 1px teal;
+  margin-bottom: 5ch;
+}
+
+.hero > p {
+  text-wrap: balance;
+  font-variant: small-caps;
+  color: teal;
+}
+
+.hero > h1 {
+  font-size: 12vmin;
+}

@@ -1,13 +1,67 @@
 {{!< default}}
 
+<style>
+  .hero {
+  margin-bottom: 5ch;
+}
+
+.hero p {
+  text-wrap: balance;
+  font-size: 3rem;
+  max-width: 50ch;
+}
+  
+.smol-centering {
+  display: grid;
+  place-content: center;
+}
+
+.pangolin-regular {
+  font-family: "Pangolin", mono;
+  font-weight: 400;
+  font-style: normal;
+}
+</style>
+
 <div class="gh-outer">
+
 <main class="site-main gh-inner">
 
+  <div class="hero smol-centering">
+    <div class="pangolin-regular">
+    <p>Welcome.</p>
+    <p>I'm curious about systems, metaphors, and finding liberatory shapes for our stories.</p>
+    <p>I write, I speak, and I work with nonprofits and hospitals to design systems that bring their values to life.</p>
+    </div>
+</div>
+
+<style>
+  .indexheader {
+    border-bottom: 3px dotted; 
+    padding-bottom: 1ch; 
+    margin-bottom: 0.5ch;
+  }
+</style>
+
+<h2 class="indexheader">Selected Projects</h2>
+  <section style="padding-block: 2ch">
     <div class="post-feed gh-feed">
         {{#foreach posts}}
-            {{> "loop"}}
+            {{> "loopproject"}}
         {{/foreach}}
     </div>
+   </section> 
+
+<h2 class="indexheader"><br>Selected Essays</h2>
+  <section style="padding-block: 2ch">
+    <div class="post-feed gh-feed">
+      {{#get "posts" filter="tag:essay"}}
+        {{#foreach posts}}
+            {{> "loopessay"}}
+        {{/foreach}}
+        {{/get}}
+    </div>
+   </section> 
 
 </main>
 </div>
